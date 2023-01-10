@@ -1,0 +1,37 @@
+@import 'style/variables';
+@import 'style/responsive';
+@import 'style/base';
+@import 'style/events';
+@import 'style/news';
+@import 'style/podcasts';
+
+  .main-content {
+    width: 70%;
+
+    @include md {
+      width: 60%;
+    }
+
+    @include ms {
+      width: 100%;
+    }
+
+    .video {
+      .video-wrapper {
+        height: 500px;
+      }
+    }
+  }
+
+  .sidebar-content {
+    width: 30%;
+
+    @include md {
+      width: 40%;
+    }
+
+    @include ms {
+      width: 100%;
+    }
+  }
+

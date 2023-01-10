@@ -1,0 +1,90 @@
+.programs-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    @mixin s {
+      @media screen and (max-width: $screen-s) {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+  
+    .program-item {
+      background-color: $color-white;
+      position: relative;
+      display: flex;
+      
+      a {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          text-decoration: none;
+          color: $color-black;
+          padding: 40px 40px 25px;
+
+          @mixin s {
+            @media screen and (max-width: $screen-s) {
+              padding: 20px;
+            }
+          }
+        }
+      
+        img.program-image {
+          height: 100px;
+          width: 100px;
+          object-fit: contain;
+        }
+  
+        ul.program-features-list {
+          list-style-type: none;
+          padding-left: 0;
+          margin-bottom: 0;
+          display: flex;
+          flex-wrap: wrap;
+          column-gap: 25px;
+          row-gap: 8px;
+        }
+  
+        .program-feature-item {
+          display: flex;
+          column-gap: 10px;
+  
+          icon {
+              width: 15px;
+              text-align: center;
+            }
+        }
+  
+        .program-extra-info {
+          background-color: $color-primary-programs;
+          color: $color-white;
+          padding: 8px 15px;
+          border-radius: 50px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          font-size: 10px;
+          position: absolute;
+          top: 20px;
+          right: -15px;
+        }
+    }
+
+    @mixin lx {
+        @media screen and (max-width: $screen-xl) {
+            grid-template-columns: 1fr;
+        }
+      }
+
+      @mixin s2 {
+        @media screen and (max-width: $screen-s2) {
+            grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @mixin s {
+        @media screen and (max-width: $screen-s) {
+          right: -10px;
+        }
+      }
+  }

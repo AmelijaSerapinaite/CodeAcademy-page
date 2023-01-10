@@ -1,0 +1,77 @@
+@import 'style/variables';
+@import 'style/responsive';
+@import 'style/programs/base';
+@import 'style-programs/programs-list';
+@import 'style-programs/programs-filter';
+
+.page-title-wrapper {
+  margin-bottom: 30px;
+}
+
+.pink-color {
+  color: $color-primary-programs;
+}
+
+.black-color {
+  color: $color-black;
+}
+
+
+.bg-image {
+  display: flex;
+  column-gap: 10px;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 30px;
+  background-image: url('banner.jpg');
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: 90% 70%;
+  background-color: $color-white;
+
+  @mixin ms {
+    @media screen and (max-width: $screen-ms) {
+      flex-direction: column;
+      background-size: 70%;
+      background-position: 120% 100%;
+    }
+  }
+
+  @mixin xs2 {
+    @media screen and (max-width: $screen-xs2) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-bottom: 150px;
+      background-size: 350px;
+      background-position: 40% 100%;
+    }
+  }
+}
+
+.programs-wrapper {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 2fr;
+
+  @mixin lx {
+    @media screen and (max-width: $screen-xl) {
+      grid-template-columns: 2fr 3fr;
+    }
+  }
+
+  @mixin s2 {
+    @media screen and (max-width: $screen-s2) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .bg-image {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 150px;
+    background-size: 350px;
+    background-position: 40% 100%;
+  }
+}

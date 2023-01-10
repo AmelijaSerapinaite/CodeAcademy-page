@@ -1,0 +1,23 @@
+.programs-filter-form {
+    background-color: white;
+    padding: 45px 40px 40px;
+    position: sticky;
+    top: 30px;
+
+    @mixin s {
+      @media screen and (max-width: $screen-s) {
+        padding: 35px 20px 30px;
+      }
+    }
+
+    .form-control:not(.checkbox) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+        display: block;
+      }
+  }
+
